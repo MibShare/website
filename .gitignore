@@ -1,0 +1,5 @@
+# Mac files
+.DS_STORE
+
+# PhpStorm
+.idea
