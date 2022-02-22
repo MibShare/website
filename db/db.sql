@@ -80,7 +80,7 @@ create table fileTable (
 );
 ## Confrontabili
 create table confrontabili (
-    idConfrontazione INTEGER PRIMARY KEY AUTO_INCREMENT,
+    idConfronto INTEGER PRIMARY KEY AUTO_INCREMENT,
     primoFile INTEGER NOT NULL,
     secondoFile INTEGER NOT NULL,
     ### Chiavi esterne
