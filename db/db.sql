@@ -1,10 +1,10 @@
 ## Crea il database se non esiste
-create database if not exists dbMiBShare
+create database if not exists dbMibShare
     CHARACTER SET =  "utf8"
     COLLATE = "utf8_unicode_ci";
 
 ## Selezioniamo il database da usare
-use dbMiBShare;
+use dbMibShare;
 
 # Creazione dei database
 ## Utente
@@ -37,7 +37,7 @@ create table token (
 create table messaggi (
     idMessaggio INTEGER PRIMARY KEY AUTO_INCREMENT,
     messaggio TEXT NOT NULL,
-    oneTime BOOLEAN NOT NULL,
+    oneTime BOOLEAN NOT NULL DEFAULT TRUE,
     fineMessaggio DATE,
     idUtente INTEGER NOT NULL,
     ### Chiave esterne
@@ -70,13 +70,16 @@ create table possiede (
 create table fileTable (
     idFile INTEGER PRIMARY KEY AUTO_INCREMENT,
     idUtente INTEGER NOT NULL,
-    nDislikes INTEGER NOT NULL,
-    nLikes INTEGER NOT NULL,
-    path VARCHAR(64) NOT NULL,
+    nDislikes INTEGER NOT NULL DEFAULT 0,
+    nLikes INTEGER NOT NULL DEFAULT 0,
+    pathValue VARCHAR(64) NOT NULL UNIQUE,
     idSezione INTEGER NOT NULL,
     ### Chiavi esterne
     FOREIGN KEY (idUtente) REFERENCES utente(idUtente),
-    FOREIGN KEY (idSezione) REFERENCES sezione(idSezione)
+    FOREIGN KEY (idSezione) REFERENCES sezione(idSezione),
+    ## Controlli
+    CHECK(nLikes >= 0),
+    CHECK(nDislikes >= 0)
 );
 ## Confrontabili
 create table confrontabili (
@@ -252,3 +255,16 @@ call aggiungi_utente('test@gmail.com', 'test', 'test', 'admin', @out);
 call aggiungi_ruolo_sezione('test', 'admin', 'Home', @outRuolo);
 ## Li tolgo il token
 DELETE FROM token where idUtente = (select idUtente from utente where username like 'test');
+## Aggiungo messaggio di test
+insert into messaggi(messaggio, idUtente)
+values ('test 1 volta', 1);
+insert into messaggi(messaggio, oneTime, fineMessaggio, idUtente)
+values ('test infinito', false, STR_TO_DATE('1-01-2100', '%d-%m-%Y'), 1);
+## Aggiungo due file di test
+insert into fileTable(idUtente, pathValue, idSezione)
+values (1, 'README.md', 1);
+insert into fileTable(idUtente, pathValue, idSezione)
+values (1, 'commit.html', 1);
+## Dell'ultimo, lo metto dentro a un commit
+insert into commitTable(date, idFile)
+values (NOW(), 2);
