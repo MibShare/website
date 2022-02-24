@@ -1,0 +1,78 @@
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">   <!-- charset utilizzato -->
+        <title>MibShare</title>  <!-- titolo sito -->
+        <meta name="description" content="Un posto dove condividere i tuoi file universitari!">   <!-- breve descrizione -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- per device di dimensioni diverse -->
+        <script src="https://kit.fontawesome.com/885add1a04.js" crossorigin="anonymous"></script> <!-- font awesome (icone) -->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous"> <!-- pure css -->
+        <link rel="stylesheet" href="style.css"> <!-- link al css -->
+        <script src="script.js"></script> <!-- link al javascript -->
+    </head>
+    <body>
+        <!-- barra principale -->
+        <header class="border">
+            <!-- icona -->
+            <img src="/images/logo/logo-small.jpeg" class=" left-logo images-padding border"></i>
+            <p class=" left-logo border">MibShare</p>
+            <!-- barra di ricerca -->
+            <form action="" class="pure-form  center-search border">
+                <input type="text" placeholder="Cerca..." class="pure-input-rounded pure-input-3-4 border">
+                <button type="submit" class="pure-button"><i class="fa-solid fa-magnifying-glass border"></i></button>
+            </form>
+            <!-- login/registrati -->
+            <i class="fa-solid fa-right-to-bracket fa-2xl  right-login images-padding border" id="log-in-padding"></i>
+            <!-- account -->
+            <section class="right-section border">
+                <i class="fa-solid fa-circle-user fa-2xl images-padding border"></i>
+                <!-- impostazioni -->
+                <i class="fa-solid fa-gear fa-2xl images-padding border"></i>
+                <!-- help -->
+                <i class="fa-solid fa-circle-info fa-2xl images-padding border"></i>
+            </section>
+        </header>
+        <!-- fine barra principale -->
+        
+        <div class= "border" id="sezione-centrale">
+            <!-- barra laterale -->
+            <aside class="border" id="left-bar">
+                <!-- aggiungere file -->
+                <button class="button-style" id="add-button">
+                    <i class="fa-solid fa-circle-plus fa-2xl images-padding border left-bar-images"></i><p class="button-description">add&nbsp;files</p>
+                </button><br>
+                <!-- avvisi -->
+                <button class="button-style">
+                    <i class="fa-solid fa-clipboard-check fa-2xl images-padding border left-bar-images" id="checklist-padding"></i><p class="button-description">news</p>
+                </button><br>
+                <!-- chat -->
+                <button class="button-style">
+                    <i class="fa-solid fa-message fa-2xl images-padding border left-bar-images"></i><p class="button-description">chat</p>
+                </button>
+            </aside>
+            <!-- fine barra laterale -->
+
+            <!-- cartella principale con dropdown -->
+            <main class="border" id="main-folder">
+                <label for="cartella">Cartella principale:</label>
+                <select name="cartella" id="cartella" class="border">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <!-- sottocartelle selezionate -->
+            </main>
+            <!-- fine cartella principale con dropdown -->
+        </div>
+
+        <!-- licenza e crediti -->
+        <footer class="border">
+            <small class="border">
+                <a id="margin-footer-licenza" class="border" href="">licenza</a>
+                <a id="margin-footer-crediti" class="border">Servizio offerto e creato da: TechAle, Brock e lorypota.</a>
+            </small>
+        </footer>
+    </body>
+</html>
+
+<!-- 3rd party siti utilizzati: fontawesome.com -->

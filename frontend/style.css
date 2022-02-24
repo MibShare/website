@@ -1,0 +1,161 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body{
+    margin-left: 0.2%;
+    margin-right: 0.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.images-padding{
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+#checklist-padding{
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#log-in-padding{
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+}
+
+/* .border{
+    border: 1px solid black;
+} */
+
+/*#region header*/
+header{
+    border-bottom: 1px solid lightgray;
+    flex-basis: 8%;
+    display:flex;
+    justify-content: space-between;
+}
+
+header i.left-logo{
+    flex-basis: 10%;
+    order: 1;
+    margin: auto;
+}
+
+header p.left-logo{
+    float: left;
+    padding-bottom: 8.5px;
+    padding-top: 8.5px;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 0px;
+    flex-basis: 10%;
+    order: 2;
+    margin: auto;
+}
+
+header form.center-search{
+    padding: 9px 0px 11.5px 0px;
+    text-align: center;
+    flex-basis: 60%;
+    order: 3;
+    margin: auto;
+}
+
+header i.right-login{
+    flex-basis: 10%;
+    order: 4;
+    margin: auto;
+}
+
+header section.right-section{
+    flex-basis: 10%;
+    order: 5;
+    margin: auto;
+}
+/*#endregion header*/
+
+/*#region sezione centrale*/
+#sezione-centrale{
+    flex-basis: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+/*#endregion sezione centrale*/
+
+/*#region aside*/
+#left-bar{
+    flex-basis: 19.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-right: 1px solid lightgrey;
+    margin-top: 0.2%;
+    margin-bottom: 0.2%;
+    padding-right: 0.2%;
+}
+
+#left-bar i.left-bar-images{
+    
+}
+
+#left-bar button.button-style{
+    background-color: white;
+    border-radius: 30px;
+    flex-basis: 20%
+}
+
+#left-bar p.button-description{
+    
+}
+/*#endregion aside*/
+
+/*#region add button*/
+#add-button{
+
+}
+/*#endregion add button*/
+
+/*#region main*/
+#main-folder{
+    flex-basis: 79.5%;
+    text-align: center;
+    margin-top: 0.2%;
+    margin-bottom: 0.2%;
+    padding-left: 0.2%;
+}
+/*#endregion main*/
+
+/*#region footer*/
+footer{
+    text-align: center;
+    border-top: 1px solid lightgray;
+    flex-basis: 6%;
+    display: flex;
+}
+
+footer small{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#margin-footer-licenza{
+    padding: 5px;
+    flex-basis: 40%;
+}
+
+#margin-footer-crediti{
+    padding: 5px;
+    flex-basis: 40%;
+}
+/*#endregion footer*/
+
+/*#region*/
+/*#endregion*/
