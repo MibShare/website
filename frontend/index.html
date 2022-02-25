@@ -37,17 +37,11 @@
             <!-- barra laterale -->
             <aside class="border" id="left-bar">
                 <!-- aggiungere file -->
-                <button class="button-style" id="add-button">
-                    <i class="fa-solid fa-circle-plus fa-2xl images-padding border left-bar-images"></i><p class="button-description">add&nbsp;files</p>
-                </button><br>
+                <button name="add-button" class="button-style" id="add-button"></button>
                 <!-- avvisi -->
-                <button class="button-style">
-                    <i class="fa-solid fa-clipboard-check fa-2xl images-padding border left-bar-images" id="checklist-padding"></i><p class="button-description">news</p>
-                </button><br>
+                <button name="news-button"class="button-style"><p class="button-description"></button>
                 <!-- chat -->
-                <button class="button-style">
-                    <i class="fa-solid fa-message fa-2xl images-padding border left-bar-images"></i><p class="button-description">chat</p>
-                </button>
+                <button name="chat-button" class="button-style"><p class="button-description"></button>
             </aside>
             <!-- fine barra laterale -->
 
@@ -67,10 +61,33 @@
 
         <!-- licenza e crediti -->
         <footer class="border">
-            <small class="border">
-                <a id="margin-footer-licenza" class="border" href="">licenza</a>
-                <a id="margin-footer-crediti" class="border">Servizio offerto e creato da: TechAle, Brock e lorypota.</a>
-            </small>
+            <!-- prima sezione footer -->
+            <div id="prima-sezione-footer">
+                <p id="footer-testo-prima-parte">
+                    <small>©</small> <a class="footer-links" href="">Licenza</a> - <a class="footer-links" href="">Termini e condizioni</a>     <!-- 2 link da aggiungere -->
+                </p>
+                <div id="footer-images-container">
+                    <div class="padding-immagini-footer">
+                        <a href="">                                                                                                             <!-- link da aggiungere -->
+                            <img class="footer-images" src="/images/icone/github.svg" alt="MibShare github">
+                        </a>
+                    </div>
+                    <div class="padding-immagini-footer">
+                        <a href="">                                                                                                             <!-- link da aggiungere -->
+                            <img class="footer-images" src="/images/icone/instagram.svg" alt="MibShare instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- seconda sezione footer -->
+            <div id="seconda-sezione-footer">
+                <a href="">
+                    <img id="logo-footer" src="/images/logo/logo-big.jpeg" alt="logo MibShare">
+                </a>
+                <p id="footer-testo-seconda-parte">
+                    MibShare è un servizio offerto e creato da: <a class="footer-link-seconda-parte" href="">TechAle</a>, <a class="footer-link-seconda-parte" href="">Brock</a> e <a class="footer-link-seconda-parte" href="">lorypota</a>.         <!-- link da aggiungere -->
+                </p>
+            </div>
         </footer>
     </body>
 </html>
